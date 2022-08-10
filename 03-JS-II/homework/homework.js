@@ -48,6 +48,24 @@ function saludo(idioma) {
 }
 
 function colors(color) {
+  switch (color) {
+    case "blue": 
+       return "This is blue";
+       break;
+    case "red" :
+       return "This is red";
+       break;
+    case "green": 
+       return "This is green";
+       break;
+    case "orange":
+       return "This is orange";
+       break;
+    default:
+       return "Color not found";
+      
+  }
+
   //La función recibe un color. Devolver el string correspondiente:
   //En caso que el color recibido sea "blue", devuleve --> "This is blue"
   //En caso que el color recibido sea "red", devuleve --> "This is red"
@@ -58,18 +76,23 @@ function colors(color) {
 }
 
 function esDiezOCinco(numero) {
+  if (numero === 10 || numero === 5){return true;}
+  else {return false;}
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
 }
 
 function estaEnRango(numero) {
+  if (numero < 50 && numero >20) {return true;}
+  else {return false;}
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
 }
 
 function esEntero(numero) {
+  return numero % 1 === 0;
   // Devuelve "true" si "numero" es un entero (int/integer)
   // Ejemplo: 0.8 -> false
   // Ejemplo: 1 -> true
