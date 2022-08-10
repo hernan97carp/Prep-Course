@@ -9,14 +9,19 @@ function obtenerMayor(x, y) {
 }
 
 function mayoriaDeEdad(edad) {
-  if (edad >=18){return'Allowed';} 
-  else {return 'Not allowed';}
+  if (edad >=18){return "Allowed";} 
+  else {return "Not allowed";}
   //Determinar si la persona según su edad puede ingresar a un evento.
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
 }
   
 function conection(status) {
+  if (status === 1)
+  {return "Online";}
+   else if(status ===2)
+   {return "Away";} 
+   else {return "Offline"};  
   //Recibimos un estado de conexión de un usuario representado por un valor numérico. 
   //Cuando el estado es igual a 1, el usuario está "Online"
   //Cuando el estado es igual a 2, el usuario está "Away"
