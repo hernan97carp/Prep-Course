@@ -1,25 +1,33 @@
 // No cambies los nombres de las funciones.
 
 function devolverPrimerElemento(array) {
-   array[0];
+   return array[0];
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
 }
 
 
 function devolverUltimoElemento(array) {
+  return array[array.length - 1];
   // Devuelve el último elemento de un array
   // Tu código:
 }
 
 
 function obtenerLargoDelArray(array) {
+  return array.length;
   // Devuelve el largo de un array
   // Tu código:
 }
 
 
 function incrementarPorUno(array) {
+
+var nuevaArray= [];
+for (var i = 0; i < array.length; i++){
+  nuevaArray[i] = array[i] + 1;
+}
+return nuevaArray;
   // "array" debe ser una matriz de enteros (int/integers)
   // Aumenta cada entero por 1
   // y devuelve el array
@@ -28,6 +36,8 @@ function incrementarPorUno(array) {
 
 
 function agregarItemAlFinalDelArray(array, elemento) {
+    array.push(elemento);
+    return array;
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
@@ -35,6 +45,8 @@ function agregarItemAlFinalDelArray(array, elemento) {
 
 
 function agregarItemAlComienzoDelArray(array, elemento) {
+  array.unshift(elemento);
+  return array;
   // Añade el "elemento" al comienzo del array
   // y devuelve el array
   // Pista: usa el método `.unshift`
@@ -43,6 +55,8 @@ function agregarItemAlComienzoDelArray(array, elemento) {
 
 
 function dePalabrasAFrase(palabras) {
+ return palabras.join(' ');
+
   // "palabras" es un array de strings/cadenas
   // Devuelve un string donde todas las palabras estén concatenadas
   // con espacios entre cada palabra
@@ -52,13 +66,24 @@ function dePalabrasAFrase(palabras) {
 
 
 function arrayContiene(array, elemento) {
+ for (var i= 0 ; i < array.length; i++){
+  if (array[i] === elemento){
+    return true;
+  }
+ }
+ return false;
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
 }
 
 
-function agregarNumeros(numeros) {
+function agregarNumeros(numeros){
+  var Suma= 0;
+  for (var i = 0; i < numeros.length; i++){
+    Suma= Suma + numeros[i];
+  }
+  return Suma;
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
