@@ -143,10 +143,10 @@ function cuentoElementos(arreglo){
 
 
 function diaDeLaSemana(numeroDeDia) {
-  if (numeroDeDia === 1 || numeroDeDia === 8){
+  if (numeroDeDia === 1 || numeroDeDia === 7){
     return "Es fin de semana";
   }
-  return "Es dia de semana";
+  return "Es dia Laboral";
   //Suponga que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente. 
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
@@ -161,6 +161,7 @@ function empiezaConNueve(n) {
     return true
   }
   return false
+
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
@@ -169,6 +170,12 @@ function empiezaConNueve(n) {
 
 
 function todosIguales(arreglo) {
+  for (var i  = 0 ; i < arreglo.length - 1; i++){
+   if (arreglo[i] !== arreglo[i+1]){
+   return false
+    }
+  }
+  return true;
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
@@ -177,6 +184,19 @@ function todosIguales(arreglo) {
 
 
 function mesesDelAño(array) {
+  var nuevaArray = [];
+  for(let i= 0; i < array.length; i++){
+   if  (array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre"){
+    nuevaArray.push(array[i]);
+    }
+  }
+  if (nuevaArray.length < 3){
+    return "No se encontraron los meses pedidos";
+  }
+  else {
+    return nuevaArray;
+  }
+
   //Dado un array que contiene algunos meses del año desordenados, recorrer el array buscando los meses de 
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
@@ -185,13 +205,40 @@ function mesesDelAño(array) {
 
 
 function mayorACien(array) {
-  //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
+  var nuevaArray= [];
+  for  (let i = 0; i <=array.length;i++){
+    if (array[i] > 100){
+      nuevaArray.push(array[i]);
+    }
+   }
+   return nuevaArray;
+  //La funci+ón recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
 }
 
 
 function breakStatement(numero) {
+  var array= [];
+  var suma = numero;
+  for(var i = 0; i < 10; i++){
+    suma= suma + 2;
+    if (suma === i)
+      break;
+      else {
+        array.push(suma);
+      }
+  }
+  if ( i < 10){
+    return "Se interrumpió la ejecución";
+  }
+  else {
+    return array;
+  }
+
+
+
+
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
   //Guardar cada nuevo valor en un array. 
   //Devolver el array
@@ -203,6 +250,16 @@ function breakStatement(numero) {
 
 
 function continueStatement(numero) {
+  var array = [];
+  var suma= numero;
+  for (var i = 0; i < 10; i++){
+ if(i === 5) continue;
+ else {
+  suma= suma + 2;
+  array.push(suma);
+    }
+  }
+  return array;
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
   //Guardar cada nuevo valor en un array.    
   //Devolver el array
